@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<contract>
+  <function name="deposit" restrict="owner">
+  </function>
+
+  <function name="regist" restrict="owner">
+  </function>
+  
+  <function name="transfer" restrict="owner">
+  </function>
+</contract>
