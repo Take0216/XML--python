@@ -23,6 +23,7 @@ class Contract: # コントラクト構造体宣言
 
     def add_function(self,f):
         self.functions.append(f) # 関数の追加
+        self.variable.append(f.variables)
 
     def add_imports(self,name):
         self.imports.append(name) # 継承の追加
@@ -115,6 +116,29 @@ ModifierList = [
     ["Ownable.sol"],
     ["Ownable"]
 ]
+
+###
+
+funcs = {}
+
+tmp = Function("deposit", "public", "payable", "")
+tmp.add_body("""
+$(v1)[msg.sender] += msg.value;
+""")
+tmp.variables = {"v1":Variable("balance", map), "v2":Variable("", address)}
+funcs["deposit"] = tmp
+
+tmp = Function("transfer", "public", "", "")
+tmp.add_body("""
+balance[msg.sender] += msg.value;
+""")
+
+funcs["transfer"] = tmp
+
+###
+
+# 正規表現 regular expression
+
 
 check = 0
 
