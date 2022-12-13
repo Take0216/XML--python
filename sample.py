@@ -15,6 +15,8 @@ for i in root.findall("function"):
     restrict = i.get("restrict")
     Func = Function(name,restrict)
     FunctionList.append(Func)
+
+
 print("pragma solidity 0.8.4;")
 print("import './Ownable.sol'\n")
 print("contract myfile is Ownable{")

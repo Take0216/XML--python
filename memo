@@ -1,0 +1,17 @@
+python
+
+"" -> /"表示
+{ -> {{に重ねて表示
+
+formatの使い方
+print("contract {name} is {extends} {{".format(name=self.name, extends=self.extends))
+
+配列[縦][横]
+
+""表示=> \"
+
+ModifierList = [
+    ["onlyOwner","to","from"]
+    ["Ownable.sol","to","from"]
+    ["Ownable","to","from"]
+]

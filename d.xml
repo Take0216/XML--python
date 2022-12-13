@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<contract>
+  <xml name="myfile">
+  </xml>
+  <function name="deposit" visibility="public" attrs="payable" modifier="onlyOwner">
+    <body text1="deposit"></body>
+  </function>
+
+  <function name="regist" visibility="public">
+    <body text1="to" text2="from" text3="amount"></body>
+  </function>
+
+  <function name="transfer" visibility="public" modifier="onlyOwner">
+    <body text1="from=to" text2="debit" text3="transfer"></body>
+  </function>
+</contract>
